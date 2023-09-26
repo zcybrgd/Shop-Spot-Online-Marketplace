@@ -5,5 +5,6 @@ i called it Shop Spot
 # functionality implemented : 
 -
 -
-
+media resources from : https://www.pexels.com/
 thanks && credits to freecodecamp 
+
