@@ -7,7 +7,7 @@
     <div class="grid grid-cols-3 gap-3">
         {% for item in items %}
         <div>
-            <a href="#">
+             <a href="{% url 'items:detail' item.id %}">
                 <div>
                    {% if item.image %}
                     <img src="{{ item.image.url }}" class="rounded-t-xl">
@@ -21,6 +21,7 @@
         </div>
         {% endfor %}
     </div>
+     <h2 class="mb-12 text-2xl text-center">Discover Categories</h2>
     <div class="grid grid-cols-3 gap-3">
         {% for cat in categories %}
         <div>
