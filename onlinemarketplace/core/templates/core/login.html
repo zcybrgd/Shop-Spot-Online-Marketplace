@@ -3,7 +3,7 @@
 {% block title %} Contact {% endblock %}
 {% block content %}
 <div class="w-1/2 my-6 mx-auto p-6 bg-gray-100 rounded-xl">
-    <h1 class="mb-6 text-3xl">Sign Up</h1>
+    <h1 class="mb-6 text-3xl">Login</h1>
 
     <form method="post" action=".">
         {% csrf_token %}
@@ -12,16 +12,8 @@
             {{ form.username }}
         </div>
         <div class="mb-3">
-            <label class="inline-block mb-2">Email</label><br>
-            {{ form.email }}
-        </div>
-        <div class="mb-3">
             <label class="inline-block mb-2">Password</label><br>
-            {{ form.password1 }}
-        </div>
-        <div class="mb-3">
-            <label class="inline-block mb-2">Confirm password</label><br>
-            {{ form.password2 }}
+            {{ form.password }}
         </div>
         {% if form.errors or form.non_field_errors %}
             <div class="mb-3 p-6 bg-red-100 rounded-xl">

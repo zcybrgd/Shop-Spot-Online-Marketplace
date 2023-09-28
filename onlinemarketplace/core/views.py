@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from items.models import Category, Item
 from .forms import SignUp
 def index(request):
@@ -13,7 +13,14 @@ def contact(request):
     return render(request, 'core/contact.html')
 
 def signup(request):
-    form = SignUp()
+    if request.method == 'POST':
+        form = SignUp(request.POST)
+
+        if form.is_valid():
+            form.save()
+            form.redirect('core/login.html')
+    else:
+        form = SignUp()
     return render(request, 'core/signup.html', {
         'form' : form
     })
