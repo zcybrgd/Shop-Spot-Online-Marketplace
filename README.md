@@ -10,7 +10,7 @@ i called it Shop Spot
 - CRUD operations for items
 - Searching operation
 
-any additional resources, or advice to master backend developement is welcomed <3<3
+any additional resources, or advice to master backend developement is welcomed <3<3\n\n
 media resources from : https://www.pexels.com/
-thanks && credits to freecodecamp 
+thanks && credits to freecodecamp and CodeWithStein on youtube
 
