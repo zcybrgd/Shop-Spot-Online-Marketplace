@@ -18,7 +18,7 @@ def signup(request):
 
         if form.is_valid():
             form.save()
-            form.redirect('core/login.html')
+            return redirect('core/login.html')
     else:
         form = SignUp()
     return render(request, 'core/signup.html', {
