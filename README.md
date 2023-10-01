@@ -1,6 +1,6 @@
 # Online Marketplace
 
-an online marketplace i built while learning the Django framework\n\n
+an online marketplace i built while learning the Django framework <br>
 it is called Shop Spot
 # functionality implemented : 
 - Authentication
@@ -10,7 +10,7 @@ it is called Shop Spot
 - CRUD operations for items
 - Searching feature
 
-any additional resources, or advice to master backend developement is welcomed <3<3\n\n
+any additional resources, or advice to master backend developement is welcomed <3<3 <br>
 media resources from : https://www.pexels.com/
 thanks && credits to freecodecamp and CodeWithStein on youtube
 
