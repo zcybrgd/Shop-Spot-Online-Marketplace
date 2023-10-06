@@ -9,7 +9,7 @@ class SignUp(UserCreationForm):
 
     username = forms.CharField(widget=forms.TextInput(attrs={
         'placeholder': 'Your Username',
-        'class' : 'w-full py-4 px-6 rounded-xl'
+        'class': 'w-full py-4 px-6 rounded-xl'
     }))
 
     email = forms.CharField(widget=forms.EmailInput(attrs={
@@ -29,7 +29,7 @@ class SignUp(UserCreationForm):
 
 class LogIn(AuthenticationForm):
     username = forms.CharField(widget=forms.TextInput(attrs={
-        'placeholder': 'Your Username',
+        'placeholder': 'Enter Your Username',
         'class': 'w-full py-4 px-6 rounded-xl'
     }))
     password = forms.CharField(widget=forms.PasswordInput(attrs={
