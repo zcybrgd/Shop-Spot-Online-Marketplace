@@ -34,6 +34,10 @@ def editItem(request, pk):
     if request.method == 'POST':
         editItemForm = EditItemForm(request.POST, request.FILES, instance=item)
         if editItemForm.is_valid():
+            # i added this
+            item = editItemForm.save()
+            # right above
+            item.save()
             editItemForm.save()
             return redirect('items:detail', pk=item.id)
     else:
