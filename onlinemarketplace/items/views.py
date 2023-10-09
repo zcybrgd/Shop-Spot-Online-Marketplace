@@ -13,16 +13,16 @@ def detail(request, pk):
 @login_required
 def addNewItem(request):
     if request.method == 'POST':
-        newItemForm = AddItemForm(request.POST, request.FILES)
-        if newItemForm.is_valid():
-            item = newItemForm.save(commit=False)
+        form = AddItemForm(request.POST, request.FILES)
+        if form.is_valid():
+            item = form.save(commit=False)
             item.created_by = request.user
             item.save()
             return redirect('items:detail', pk=item.id)
     else:
-        newItemForm = AddItemForm()
+        form = AddItemForm()
     return render(request, 'items/form.html', {
-        'form': newItemForm,
+        'form': form,
         'title' : 'Add Item'
     })
 
@@ -32,18 +32,14 @@ def addNewItem(request):
 def editItem(request, pk):
     item = get_object_or_404(Item, pk=pk, created_by=request.user)
     if request.method == 'POST':
-        editItemForm = EditItemForm(request.POST, request.FILES, instance=item)
-        if editItemForm.is_valid():
-            # i added this
-            item = editItemForm.save()
-            # right above
-            item.save()
-            editItemForm.save()
+        form = EditItemForm(request.POST, request.FILES, instance=item)
+        if form.is_valid():
+            form.save()
             return redirect('items:detail', pk=item.id)
     else:
-        editItemForm = EditItemForm(instance=item)
+        form = EditItemForm(instance=item)
     return render(request, 'items/form.html', {
-        'form': editItemForm,
+        'form': form,
         'title' : 'Edit Item'
     })
 
