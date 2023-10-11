@@ -35,7 +35,7 @@ class AddItemForm(forms.ModelForm):
 class EditItemForm(forms.ModelForm):
     class Meta:
         model = Item
-        fields = ('name', 'description', 'price', 'image', 'is_sold')
+        fields = ('name', 'description', 'price', 'is_sold')
         widgets = {
             'name': forms.TextInput(attrs={
                 'class': INPUT_CLASSES
@@ -46,7 +46,4 @@ class EditItemForm(forms.ModelForm):
             'price': forms.TextInput(attrs={
                 'class': INPUT_CLASSES
             }),
-            'image': forms.FileInput(attrs={
-                'class': INPUT_CLASSES
-            })
         }
