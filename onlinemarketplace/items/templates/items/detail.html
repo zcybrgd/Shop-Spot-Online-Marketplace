@@ -18,7 +18,7 @@
         {% endif %}
           {% if request.user == item.created_by %}
                     <div class="mt-6 p-6 rounded-xl">
-                        <a href="{% url 'items:edit' item.id %}" class="inline-block px-6 py-3 text-lg font-semibold bg-green-500 text-white rounded-xl hover:bg-blue-700">Edit</a>
+                        <a href="{% url 'items:edit_item' item.id %}" class="inline-block px-6 py-3 text-lg font-semibold bg-green-500 text-white rounded-xl hover:bg-blue-700">Edit</a>
                         <a href="{% url 'items:delete' item.id %}" class="inline-block px-6 py-3 text-lg font-semibold bg-red-500 text-white rounded-xl hover:bg-blue-700">Delete</a>
                     </div>
                     {% else %}
