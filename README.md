@@ -20,4 +20,4 @@ media resources from : https://www.pexels.com/
 
 
 helped me in learning: freecodecamp, CodeWithStein and Programming with Mosh on youtube
-
+(too lazy to finish some details and fix some things so this repo is still in progress x) )
