@@ -19,7 +19,7 @@ media resources from : https://www.pexels.com/
 </p>
 
 
-helped me in learning: freecodecamp, CodeWithStein and Programming with Mosh on youtube\n\n\n
+helped me in learning: freecodecamp, CodeWithStein and Programming with Mosh on youtube
 
 
 (too lazy to finish some details and fix some things so this repo is still in progress x) )
