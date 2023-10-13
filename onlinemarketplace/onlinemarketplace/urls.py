@@ -11,6 +11,7 @@ urlpatterns = [
     path('items/', include('items.urls')),
     path('admin/', admin.site.urls),
     path('contact/', contact, name='contact'),
+    path('discu/', include('discussions.urls')),
     path('__debug__/', include(debug_toolbar.urls))
 ]
 

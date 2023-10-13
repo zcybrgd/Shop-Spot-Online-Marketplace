@@ -5,7 +5,7 @@ from django.db.models import Q
 from .models import Item, Category
 from .forms import AddItemForm, EditItemForm
 
-# create the detail of an items
+# create the detail of an item
 def detail(request, pk):
     # to get this from the database
     item = get_object_or_404(Item, pk=pk)
@@ -13,7 +13,6 @@ def detail(request, pk):
     return render(request, 'items/detail.html',{'item': item,
                                                 'related_items': same_cat_items})
 
-# test in another
 
 def explore(request):
     items = Item.objects.filter(is_sold=False)

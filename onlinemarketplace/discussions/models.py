@@ -1,6 +1,8 @@
 from django.db import models
 from items.models import Item
 from django.contrib.auth.models import User
+
+
 class Discussion(models.Model):
     item = models.ForeignKey(Item, related_name='discussions', on_delete=models.CASCADE)
     engaging_users = models.ManyToManyField(User, related_name='discussions')
